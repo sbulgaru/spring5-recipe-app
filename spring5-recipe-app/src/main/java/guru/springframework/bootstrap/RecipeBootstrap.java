@@ -1,20 +1,23 @@
-//package guru.springframework.spring5recipeapp.bootstrap;
+//package guru.springframework.bootstrap;
 //
-//import guru.springframework.spring5recipeapp.domain.*;
-//import guru.springframework.spring5recipeapp.repositories.CategoryRepository;
-//import guru.springframework.spring5recipeapp.repositories.RecipeRepository;
-//import guru.springframework.spring5recipeapp.repositories.UnitOfMeasureRepository;
+//import guru.springframework.domain.*;
+//import guru.springframework.repositories.CategoryRepository;
+//import guru.springframework.repositories.RecipeRepository;
+//import guru.springframework.repositories.UnitOfMeasureRepository;
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.context.ApplicationListener;
 //import org.springframework.context.event.ContextRefreshedEvent;
 //import org.springframework.stereotype.Component;
+//import org.springframework.transaction.annotation.Transactional;
 //
-//import javax.transaction.Transactional;
 //import java.math.BigDecimal;
 //import java.util.ArrayList;
 //import java.util.List;
 //import java.util.Optional;
 //
+///**
+// * Created by jt on 6/13/17.
+// */
 //@Slf4j
 //@Component
 //public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
@@ -32,11 +35,11 @@
 //    @Override
 //    @Transactional
 //    public void onApplicationEvent(ContextRefreshedEvent event) {
-//        log.debug("Loading Bootstrap Data");
 //        recipeRepository.saveAll(getRecipes());
+//        log.debug("Loading Bootstrap Data");
 //    }
 //
-//   private List<Recipe> getRecipes() {
+//    private List<Recipe> getRecipes() {
 //
 //        List<Recipe> recipes = new ArrayList<>(2);
 //
